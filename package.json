@@ -1,0 +1,17 @@
+{
+  "name": "number-words",
+  "version": "0.1.0",
+  "description": "convert integers to english words, teens and all",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
