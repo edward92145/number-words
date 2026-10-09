@@ -1,6 +1,6 @@
 {
   "name": "number-words",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "convert integers to english words, teens and all",
   "type": "module",
   "main": "src/index.js",
