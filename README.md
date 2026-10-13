@@ -29,3 +29,10 @@ Check-writing, human-readable IDs, educational tooling, and audit logs all want 
 `Number.MAX_SAFE_INTEGER` (2^53 − 1) is the hard ceiling. Anything larger is not representable as an exact integer in JavaScript and will be rejected, not silently rounded. If you need larger values, pass strings into a BigInt-aware library instead.
 
 The exported names are: `toWords`, `tripleToWords`, `ONES_TEENS`, `TENS`, `SCALES`. `toWords` is the function most callers want; the rest are exposed for callers building related formatters.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
